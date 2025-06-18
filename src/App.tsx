@@ -1,12 +1,13 @@
-import { FC } from 'react'
-import styles from './App.module.css'
+import { QuoteDisplay } from './components/QuoteDisplay';
+import styles from './App.module.css';
 
-const App: FC = () => {
+function App() {
   return (
     <div className={styles.app}>
-      <h1 className={styles.title}>Hello World</h1>
+      <h1 className={styles.title}>Random Quotes</h1>
+      <QuoteDisplay />
     </div>
-  )
+  );
 }
 
-export default App 
+export default App; 
