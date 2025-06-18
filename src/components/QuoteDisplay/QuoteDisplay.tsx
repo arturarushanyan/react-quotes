@@ -1,4 +1,5 @@
-import { useQuotes } from '../hooks/useQuotes';
+import { useQuotes } from '../../hooks/useQuotes';
+import { Quote } from '../Quote/Quote';
 import styles from './QuoteDisplay.module.css';
 
 export const QuoteDisplay = () => {
@@ -16,8 +17,7 @@ export const QuoteDisplay = () => {
     <div className={styles.container}>
       {quote && (
         <>
-          <blockquote className={styles.quote}>{quote.quote}</blockquote>
-          <p className={styles.author}>- {quote.author}</p>
+          <Quote quote={quote} />
           <button onClick={fetchRandomQuote} className={styles.button}>
             New Quote
           </button>
@@ -25,4 +25,4 @@ export const QuoteDisplay = () => {
       )}
     </div>
   );
-}; 
+};

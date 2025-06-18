@@ -9,4 +9,4 @@ export interface QuoteResponse {
   total: number;
   skip: number;
   limit: number;
-} 
+}

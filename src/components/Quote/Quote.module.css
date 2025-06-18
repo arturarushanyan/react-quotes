@@ -1,0 +1,15 @@
+.quoteContainer {
+  margin-bottom: 2rem;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.author {
+  font-size: 1.2rem;
+  color: #666;
+}

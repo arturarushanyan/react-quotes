@@ -1,4 +1,4 @@
-import { QuoteDisplay } from './components/QuoteDisplay';
+import { QuoteDisplay } from './components/QuoteDisplay/QuoteDisplay';
 import styles from './App.module.css';
 
 function App() {
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;

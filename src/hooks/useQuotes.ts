@@ -29,4 +29,4 @@ export const useQuotes = () => {
   }, []);
 
   return { quote, loading, error, fetchRandomQuote };
-}; 
+};
