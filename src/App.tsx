@@ -4,7 +4,7 @@ import styles from './App.module.css';
 function App() {
   return (
     <div className={styles.app}>
-      <h1 className={styles.title}>Random Quotes</h1>
+      <h1 className={styles.title}>Quotes That Might Inspire You</h1>
       <QuoteDisplay />
     </div>
   );
