@@ -1,12 +1,69 @@
-# React + Vite
+# React Quotes App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that displays random quotes from an API. Users can rate quotes and view their collection of rated quotes.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Display random quotes from the DummyJSON API
+- Rate quotes using a 5-star rating system
+- View all rated quotes in a separate page
+- Offline support with fallback quotes
+- Persistent storage using localStorage
+- Responsive design
 
-## Expanding the ESLint configuration
+## How to Run
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start the development server:
+```bash
+npm run dev
+```
+
+3. Open your browser and navigate to `http://localhost:5173`
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint
+- `npm run preview` - Preview production build
+
+## Folder Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── Layout/         # Main layout with header and navigation
+│   ├── Quote/          # Individual quote display component
+│   └── Rating/         # Star rating component
+├── contexts/           # React context providers
+│   └── RatedQuotesContext.tsx
+├── hooks/              # Custom React hooks
+│   ├── useQuotes.ts    # API quote fetching logic
+│   └── useRatedQuotes.ts # Rated quotes state management
+├── pages/              # Page components
+│   ├── HomePage/       # Main page with random quotes
+│   └── RatedQuotesPage/ # Page showing rated quotes
+├── types/              # TypeScript type definitions
+│   └── quote.ts
+├── data/               # Static data
+│   └── fallbackQuotes.ts
+└── App.tsx             # Main app component with routing
+```
+
+## Technologies Used
+
+- React 19
+- TypeScript
+- React Router for navigation
+- CSS Modules for styling
+- Vite for build tooling
+- ESLint for code linting
+
+## API
+
+The app uses the DummyJSON quotes API (`https://dummyjson.com/quotes`) to fetch random quotes. When offline, it falls back to a set of predefined quotes stored locally.
