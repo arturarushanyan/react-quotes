@@ -1,12 +1,21 @@
-import { QuoteDisplay } from './components/QuoteDisplay/QuoteDisplay';
-import styles from './App.module.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout/Layout';
+import { HomePage } from './pages/HomePage/HomePage';
+import { RatedQuotesPage } from './pages/RatedQuotesPage/RatedQuotesPage';
+import { RatedQuotesProvider } from './contexts/RatedQuotesContext';
 
 function App() {
   return (
-    <div className={styles.app}>
-      <h1 className={styles.title}>Quotes That Might Inspire You</h1>
-      <QuoteDisplay />
-    </div>
+    <RatedQuotesProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="rated-quotes" element={<RatedQuotesPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </RatedQuotesProvider>
   );
 }
 

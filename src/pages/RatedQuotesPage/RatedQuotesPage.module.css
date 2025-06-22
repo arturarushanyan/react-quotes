@@ -1,0 +1,92 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.emptyMessage {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.title {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.5rem;
+}
+
+.clearAllButton {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.clearAllButton:hover {
+  background: #c0392b;
+}
+
+.quotesList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.quoteItem {
+  position: relative;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  transition: box-shadow 0.2s;
+}
+
+.quoteItem:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quoteContent {
+  padding-right: 2rem;
+}
+
+.removeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeButton:hover {
+  background: #f8f9fa;
+  color: #e74c3c;
+} 
