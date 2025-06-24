@@ -18,12 +18,17 @@ A simple React application that displays random quotes from an API. Users can ra
 npm install
 ```
 
-2. Start the development server:
+2. Create environment file:
+```bash
+cp .env.example .env
+```
+
+3. Start the development server:
 ```bash
 npm run dev
 ```
 
-3. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to `http://localhost:5173`
 
 ## Available Scripts
 
@@ -31,6 +36,24 @@ npm run dev
 - `npm run build` - Build for production
 - `npm run lint` - Run ESLint
 - `npm run preview` - Preview production build
+
+## Environment Setup
+
+The app uses environment variables for configuration. Create a `.env` file based on `.env.example` and set your API URL:
+
+```
+VITE_QUOTES_API_URL=https://dummyjson.com/quotes
+```
+
+## CI/CD Pipeline
+
+The project includes a GitHub Actions workflow that runs on every push and pull request:
+
+- Linting: Runs ESLint to check code quality
+- TypeScript Check: Validates TypeScript types
+- Triggers: Runs on pushes to main branch and pull requests
+
+The pipeline ensures code quality and catches issues before they reach the main branch.
 
 ## Folder Structure
 
@@ -53,6 +76,9 @@ src/
 ├── data/               # Static data
 │   └── fallbackQuotes.ts
 └── App.tsx             # Main app component with routing
+.github/
+└── workflows/          # GitHub Actions workflows
+    └── lint.yml        # Linting and type checking pipeline
 ```
 
 ## Technologies Used
